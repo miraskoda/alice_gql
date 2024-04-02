@@ -100,6 +100,8 @@ class _AliceCallResponseWidgetState
       } else {
         rows.addAll(_buildTextBodyRows());
       }
+    } else if (_isFerryResponse()) {
+      rows.addAll(_buildFerryRows());
     } else {
       rows.addAll(_buildUnknownBodyRows());
     }
@@ -181,6 +183,15 @@ class _AliceCallResponseWidgetState
   }
 
   List<Widget> _buildTextBodyRows() {
+    final rows = <Widget>[];
+    final headers = _call.response!.headers;
+    final bodyContent =
+        formatBody(_call.response!.body, getContentType(headers));
+    rows.add(getListRow('Body:', bodyContent));
+    return rows;
+  }
+
+  List<Widget> _buildFerryRows() {
     final rows = <Widget>[];
     final headers = _call.response!.headers;
     final bodyContent =
@@ -282,6 +293,10 @@ class _AliceCallResponseWidgetState
     return responseContentTypeLowerCase.contains(_jsonContentType) ||
         responseContentTypeLowerCase.contains(_xmlContentType) ||
         responseContentTypeLowerCase.contains(_textContentType);
+  }
+
+  bool _isFerryResponse() {
+    return _call.request!.contentType == 'graphql';
   }
 
   String? _getContentTypeOfResponse() {
