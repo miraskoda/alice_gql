@@ -8,7 +8,7 @@ import 'package:alice_graphql_example/posts_service.dart';
 import 'package:chopper/chopper.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as http hide http;
 import 'package:path_provider/path_provider.dart';
 
 void main() => runApp(MyApp());
@@ -343,7 +343,10 @@ class _MyAppState extends State<MyApp> {
     _httpClient
         .postUrl(Uri.parse('https://jsonplaceholder.typicode.com/posts'))
         .then((request) async {
+      //for http
       _alice.onHttpClientRequest(request, body: body);
+      //for graphql
+      // _alice.onGqlClientRequest(request);
       request.write(body);
       var httpResponse = await request.close();
       var responseBody = await utf8.decoder.bind(httpResponse).join();
@@ -353,7 +356,10 @@ class _MyAppState extends State<MyApp> {
     _httpClient
         .putUrl(Uri.parse('https://jsonplaceholder.typicode.com/posts/1'))
         .then((request) async {
+      //for http
       _alice.onHttpClientRequest(request, body: body);
+      //for graphql
+      // _alice.onGqlClientRequest(request);
       request.write(body);
       var httpResponse = await request.close();
       var responseBody = await utf8.decoder.bind(httpResponse).join();
@@ -363,7 +369,10 @@ class _MyAppState extends State<MyApp> {
     _httpClient
         .patchUrl(Uri.parse('https://jsonplaceholder.typicode.com/posts/1'))
         .then((request) async {
+      //for http
       _alice.onHttpClientRequest(request, body: body);
+      //for graphql
+      // _alice.onGqlClientRequest(request);
       request.write(body);
       var httpResponse = await request.close();
       var responseBody = await utf8.decoder.bind(httpResponse).join();
@@ -373,7 +382,10 @@ class _MyAppState extends State<MyApp> {
     _httpClient
         .deleteUrl(Uri.parse('https://jsonplaceholder.typicode.com/posts/1'))
         .then((request) async {
-      _alice.onHttpClientRequest(request);
+      //for http
+      _alice.onHttpClientRequest(request, body: body);
+      //for graphql
+      // _alice.onGqlClientRequest(request);
       var httpResponse = await request.close();
       var responseBody = await utf8.decoder.bind(httpResponse).join();
       _alice.onHttpClientResponse(httpResponse, request, body: responseBody);
@@ -382,10 +394,16 @@ class _MyAppState extends State<MyApp> {
     _httpClient
         .getUrl(Uri.parse('https://jsonplaceholder.typicode.com/test/test/'))
         .then((request) async {
-      _alice.onHttpClientRequest(request);
+      //for http
+      _alice.onHttpClientRequest(request, body: body);
+      //for graphql
+      //_alice.onGqlClientRequest(request);
       var httpResponse = await request.close();
       var responseBody = await utf8.decoder.bind(httpResponse).join();
+      //for http
       _alice.onHttpClientResponse(httpResponse, request, body: responseBody);
+      //for gql
+      //_alice.onGqlClientResponse(request,httpResponse);
     });
   }
 

@@ -1,6 +1,6 @@
 name: alice_graphql
 description: Alice is an HTTP Inspector tool which helps debugging http requests. It catches and stores http requests and responses, which can be viewed via simple UI.
-version: 0.4.1
+version: 0.4.2+1
 homepage: https://github.com/miraskoda/alice_gql
 
 environment:
