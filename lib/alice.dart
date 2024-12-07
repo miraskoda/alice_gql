@@ -1,19 +1,19 @@
 import 'dart:io';
 
-import 'package:alice/core/alice_chopper_response_interceptor.dart';
-import 'package:alice/core/alice_core.dart';
-import 'package:alice/core/alice_dio_interceptor.dart';
-import 'package:alice/core/alice_gql_adapter.dart';
-import 'package:alice/core/alice_http_adapter.dart';
-import 'package:alice/core/alice_http_client_adapter.dart';
-import 'package:alice/model/alice_http_call.dart';
-import 'package:alice/model/alice_log.dart';
+import 'package:alice_graphql/core/alice_chopper_response_interceptor.dart';
+import 'package:alice_graphql/core/alice_core.dart';
+import 'package:alice_graphql/core/alice_dio_interceptor.dart';
+import 'package:alice_graphql/core/alice_gql_adapter.dart';
+import 'package:alice_graphql/core/alice_http_adapter.dart';
+import 'package:alice_graphql/core/alice_http_client_adapter.dart';
+import 'package:alice_graphql/model/alice_http_call.dart';
+import 'package:alice_graphql/model/alice_log.dart';
 import 'package:chopper/chopper.dart';
 import 'package:flutter/material.dart';
-import 'package:gql_exec/src/request.dart' as ferry_request;
+import 'package:gql_exec/gql_exec.dart' as ferry_request;
 import 'package:http/http.dart' as http;
 
-export 'package:alice/model/alice_log.dart';
+export 'package:alice_graphql/model/alice_log.dart';
 
 class Alice {
   /// Should user be notified with notification if there's new request catched

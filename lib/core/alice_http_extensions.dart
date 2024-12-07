@@ -1,4 +1,4 @@
-import 'package:alice/alice.dart';
+import 'package:alice_graphql/alice.dart';
 import 'package:http/http.dart';
 
 extension AliceHttpExtensions on Future<Response> {

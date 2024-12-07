@@ -1,9 +1,7 @@
-name: alice
+name: alice_graphql
 description: Alice is an HTTP Inspector tool which helps debugging http requests. It catches and stores http requests and responses, which can be viewed via simple UI.
 version: 0.4.1
-#author: Jakub Homlala <jhomlala@gmail.com>
-homepage: https://github.com/jhomlala/alice
-publish_to: none
+homepage: https://github.com/miraskoda/alice_gql
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -27,6 +25,7 @@ dependencies:
   collection: ^1.17.1
   url_launcher: ^6.1.6
   ferry: ^0.15.0+1
+  gql_exec: ^1.0.0+1
 
 dev_dependencies:
   very_good_analysis: ^5.1.0

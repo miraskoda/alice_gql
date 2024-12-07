@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:alice/model/alice_log.dart';
+import 'package:alice_graphql/model/alice_log.dart';
 import 'package:flutter/foundation.dart';
 
 class AliceLogger {

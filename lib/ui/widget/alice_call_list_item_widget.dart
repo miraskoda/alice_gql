@@ -1,7 +1,7 @@
-import 'package:alice/helper/alice_conversion_helper.dart';
-import 'package:alice/model/alice_http_call.dart';
-import 'package:alice/model/alice_http_response.dart';
-import 'package:alice/utils/alice_constants.dart';
+import 'package:alice_graphql/helper/alice_conversion_helper.dart';
+import 'package:alice_graphql/model/alice_http_call.dart';
+import 'package:alice_graphql/model/alice_http_response.dart';
+import 'package:alice_graphql/utils/alice_constants.dart';
 import 'package:flutter/material.dart';
 
 const _endpointMaxLines = 10;

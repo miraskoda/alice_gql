@@ -2,11 +2,11 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:alice/core/alice_utils.dart';
-import 'package:alice/helper/alice_alert_helper.dart';
-import 'package:alice/helper/alice_conversion_helper.dart';
-import 'package:alice/model/alice_http_call.dart';
-import 'package:alice/utils/alice_parser.dart';
+import 'package:alice_graphql/core/alice_utils.dart';
+import 'package:alice_graphql/helper/alice_alert_helper.dart';
+import 'package:alice_graphql/helper/alice_conversion_helper.dart';
+import 'package:alice_graphql/model/alice_http_call.dart';
+import 'package:alice_graphql/utils/alice_parser.dart';
 import 'package:flutter/material.dart';
 import 'package:open_filex/open_filex.dart';
 import 'package:package_info_plus/package_info_plus.dart';

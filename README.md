@@ -92,7 +92,7 @@ $ flutter packages get
 3. Import it
 
 ```dart
-import 'package:alice/alice.dart';
+import 'package:alice_graphql/alice.dart';
 ```
 
 ## Usage
@@ -243,8 +243,8 @@ You can use extensions to shorten your http and http client code. This is option
 Example:
 1. Import:
 ```dart
-import 'package:alice/core/alice_http_client_extensions.dart';
-import 'package:alice/core/alice_http_extensions.dart';
+import 'package:alice_graphql/core/alice_http_client_extensions.dart';
+import 'package:alice_graphql/core/alice_http_extensions.dart';
 ```
 
 2. Use extensions:

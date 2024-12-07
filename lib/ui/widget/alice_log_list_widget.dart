@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:ui';
 
-import 'package:alice/model/alice_log.dart';
-import 'package:alice/utils/alice_scroll_behavior.dart';
-import 'package:alice/utils/alice_theme.dart';
+import 'package:alice_graphql/model/alice_log.dart';
+import 'package:alice_graphql/utils/alice_scroll_behavior.dart';
+import 'package:alice_graphql/utils/alice_theme.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

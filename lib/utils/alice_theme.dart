@@ -1,4 +1,4 @@
-import 'package:alice/utils/alice_constants.dart';
+import 'package:alice_graphql/utils/alice_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
